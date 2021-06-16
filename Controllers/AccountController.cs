@@ -29,7 +29,7 @@ namespace _3DFTCustomerSolution.Controllers
                 if(isValid)
                 {
                    FormsAuthentication.SetAuthCookie(loginModel.UserName, false);
-                    return View("AdminPanel");
+                    return RedirectToAction("GetAllCustomers", "Customer");
                 }
                 else
                 {
